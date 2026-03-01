@@ -1,11 +1,11 @@
-import './Events.css';
+import './Events.css'
 
 interface Event {
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  description: string;
+  title: string
+  date: string
+  time: string
+  location: string
+  description: string
 }
 
 const defaultEvents: Event[] = [
@@ -30,10 +30,10 @@ const defaultEvents: Event[] = [
     location: 'Room 101',
     description: 'Perfect for newcomers! Learn the basics and meet other members.',
   },
-];
+]
 
 interface EventCardProps {
-  event: Event;
+  event: Event
 }
 
 function EventCard({ event }: EventCardProps) {
@@ -49,12 +49,12 @@ function EventCard({ event }: EventCardProps) {
         <p className="event-description">{event.description}</p>
       </div>
     </article>
-  );
+  )
 }
 
 interface EventsProps {
-  title?: string;
-  events?: Event[];
+  title?: string
+  events?: Event[]
 }
 
 function Events({ title = 'Upcoming Events', events = defaultEvents }: EventsProps) {
@@ -69,7 +69,7 @@ function Events({ title = 'Upcoming Events', events = defaultEvents }: EventsPro
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -78,8 +78,8 @@ export default function EventsPreview() {
     <div className="preview-container">
       <Events />
     </div>
-  );
+  )
 }
 
-export { Events, EventCard };
-export type { Event };
+export { Events, EventCard }
+export type { Event }

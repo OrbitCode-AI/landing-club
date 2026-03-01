@@ -1,9 +1,9 @@
-import { useVar } from 'orbitcode';
-import './Join.css';
+import { useVar } from 'orbitcode'
+import './Join.css'
 
 interface JoinProps {
-  title?: string;
-  benefits?: string[];
+  title?: string
+  benefits?: string[]
 }
 
 const defaultBenefits = [
@@ -11,18 +11,18 @@ const defaultBenefits = [
   'Member-only workshops and training sessions',
   'Connect with like-minded individuals',
   'Discounts on tournaments and merchandise',
-];
+]
 
 function Join({ title = 'Become a Member', benefits = defaultBenefits }: JoinProps) {
-  const [name, setName] = useVar('clubJoinName', '');
-  const [email, setEmail] = useVar('clubJoinEmail', '');
+  const [name, setName] = useVar('clubJoinName', '')
+  const [email, setEmail] = useVar('clubJoinEmail', '')
 
   const handleSubmit = (e: Event) => {
-    e.preventDefault();
-    alert(`Welcome to the club, ${name}! Check your email for next steps.`);
-    setName('');
-    setEmail('');
-  };
+    e.preventDefault()
+    alert(`Welcome to the club, ${name}! Check your email for next steps.`)
+    setName('')
+    setEmail('')
+  }
 
   return (
     <section id="join" className="join">
@@ -45,14 +45,14 @@ function Join({ title = 'Become a Member', benefits = defaultBenefits }: JoinPro
             type="text"
             placeholder="Your Name"
             value={name}
-            onInput={(e) => setName((e.target as HTMLInputElement).value)}
+            onInput={e => setName((e.target as HTMLInputElement).value)}
             required
           />
           <input
             type="email"
             placeholder="Your Email"
             value={email}
-            onInput={(e) => setEmail((e.target as HTMLInputElement).value)}
+            onInput={e => setEmail((e.target as HTMLInputElement).value)}
             required
           />
           <button type="submit">Join the Club</button>
@@ -60,7 +60,7 @@ function Join({ title = 'Become a Member', benefits = defaultBenefits }: JoinPro
         </form>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -69,7 +69,7 @@ export default function JoinPreview() {
     <div className="preview-container">
       <Join />
     </div>
-  );
+  )
 }
 
-export { Join };
+export { Join }

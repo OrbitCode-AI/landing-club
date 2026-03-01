@@ -1,11 +1,11 @@
-import './Footer.css';
+import './Footer.css'
 
 interface FooterProps {
-  name?: string;
+  name?: string
 }
 
 function Footer({ name = 'Club Name' }: FooterProps) {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
 
   return (
     <footer className="footer">
@@ -21,16 +21,24 @@ function Footer({ name = 'Club Name' }: FooterProps) {
           <a href="#join">Join</a>
         </div>
         <div className="footer-social">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Twitter">TW</a>
-          <a href="#" aria-label="Discord">DC</a>
+          <a href="#" aria-label="Instagram">
+            IG
+          </a>
+          <a href="#" aria-label="Twitter">
+            TW
+          </a>
+          <a href="#" aria-label="Discord">
+            DC
+          </a>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {year} {name}. All rights reserved.</p>
+        <p>
+          &copy; {year} {name}. All rights reserved.
+        </p>
       </div>
     </footer>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -39,7 +47,7 @@ export default function FooterPreview() {
     <div className="preview-container">
       <Footer />
     </div>
-  );
+  )
 }
 
-export { Footer };
+export { Footer }

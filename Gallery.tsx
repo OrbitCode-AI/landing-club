@@ -1,8 +1,8 @@
-import './Gallery.css';
+import './Gallery.css'
 
 interface GalleryImage {
-  label: string;
-  icon: string;
+  label: string
+  icon: string
 }
 
 const defaultImages: GalleryImage[] = [
@@ -12,10 +12,10 @@ const defaultImages: GalleryImage[] = [
   { label: 'Social Night', icon: '🎭' },
   { label: 'Outdoor Trip', icon: '🏕️' },
   { label: 'Celebration', icon: '🎊' },
-];
+]
 
 interface GalleryItemProps {
-  image: GalleryImage;
+  image: GalleryImage
 }
 
 function GalleryItem({ image }: GalleryItemProps) {
@@ -26,12 +26,12 @@ function GalleryItem({ image }: GalleryItemProps) {
         <span className="gallery-label">{image.label}</span>
       </div>
     </div>
-  );
+  )
 }
 
 interface GalleryProps {
-  title?: string;
-  images?: GalleryImage[];
+  title?: string
+  images?: GalleryImage[]
 }
 
 function Gallery({ title = 'Photo Gallery', images = defaultImages }: GalleryProps) {
@@ -46,7 +46,7 @@ function Gallery({ title = 'Photo Gallery', images = defaultImages }: GalleryPro
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -55,8 +55,8 @@ export default function GalleryPreview() {
     <div className="preview-container">
       <Gallery />
     </div>
-  );
+  )
 }
 
-export { Gallery, GalleryItem };
-export type { GalleryImage };
+export { Gallery, GalleryItem }
+export type { GalleryImage }

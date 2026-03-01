@@ -1,9 +1,9 @@
-import './Team.css';
+import './Team.css'
 
 interface TeamMember {
-  name: string;
-  role: string;
-  avatar: string;
+  name: string
+  role: string
+  avatar: string
 }
 
 const defaultMembers: TeamMember[] = [
@@ -11,10 +11,10 @@ const defaultMembers: TeamMember[] = [
   { name: 'Sam Williams', role: 'Vice President', avatar: '👤' },
   { name: 'Jordan Smith', role: 'Treasurer', avatar: '👤' },
   { name: 'Casey Brown', role: 'Secretary', avatar: '👤' },
-];
+]
 
 interface MemberCardProps {
-  member: TeamMember;
+  member: TeamMember
 }
 
 function MemberCard({ member }: MemberCardProps) {
@@ -24,12 +24,12 @@ function MemberCard({ member }: MemberCardProps) {
       <h3 className="member-name">{member.name}</h3>
       <p className="member-role">{member.role}</p>
     </div>
-  );
+  )
 }
 
 interface TeamProps {
-  title?: string;
-  members?: TeamMember[];
+  title?: string
+  members?: TeamMember[]
 }
 
 function Team({ title = 'Meet Our Team', members = defaultMembers }: TeamProps) {
@@ -44,7 +44,7 @@ function Team({ title = 'Meet Our Team', members = defaultMembers }: TeamProps) 
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -53,8 +53,8 @@ export default function TeamPreview() {
     <div className="preview-container">
       <Team />
     </div>
-  );
+  )
 }
 
-export { Team, MemberCard };
-export type { TeamMember };
+export { Team, MemberCard }
+export type { TeamMember }
